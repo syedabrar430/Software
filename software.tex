@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage{listings}
+
+\begin{document}
+
+\title{Audio Player Program Report}
+\author{ Syed Abrar}
+
+
+\maketitle
+
+\section{Introduction}
+This report outlines the development and utilization of a Python-based audio player program. The program enables users to play, pause, replay, and randomly choose audio files from a designated directory. The audio playback functionality is achieved using the Pygame library.
+
+
+\section{Usage}
+To use the program, follow these steps:
+
+\begin{enumerate}
+  \item Specify the directory where the audio files are located by modifying the \texttt{directory} variable.
+  \item Run the program.
+  \item Enter the following commands when prompted:
+  \begin{itemize}
+    \item \texttt{replay}:Initiates the playback of the current audio file from the beginning. 
+    \item \texttt{pause}: Halts the playback of the currently playing audio.
+    \item \texttt{play}: Resumes the playback of the paused audio.
+    \item \texttt{randomNew}: The program chooses another audio file randomly and initiates its playback.
+    \item \texttt{quit}: Stops the audio playback and exits the program.
+  \end{itemize}
+\end{enumerate}
+
+\section{Code Description}
+The program consists of the following functions:
+
+\begin{itemize}
+  \item \texttt{play\_audio(file\_path)}: Loads and initiates the playback of the audio file specified by \texttt{file\_path}.
+  \item \texttt{pause\_audio()}: Halts the playback of the currently playing audio.
+  \item \texttt{unpause\_audio()}: Resumes the playback of the paused audio.
+  \item \texttt{play\_random\_audio(directory, previous\_file)}: Selects a random audio file from the specified \texttt{directory} and plays it, excluding the \texttt{previous\_file} from the selection.
+  \item \texttt{choose\_random\_audio(directory, previous\_file)}: Selects a random audio file from the specified \texttt{directory}, excluding the \texttt{previous\_file}.
+\end{itemize}
+
+The program begins by setting up the Pygame mixer and loading the initial random audio file for playback. Subsequently, a continuous loop prompts the user for commands.
+
+
+\section{Conclusion}
+The audio player program offers essential capabilities for playing, pausing, and choosing random audio files. It has the potential for expansion by incorporating additional functionalities like volume adjustment, playlist organization, and integration with a graphical user interface (GUI).
+
+\end{document}
